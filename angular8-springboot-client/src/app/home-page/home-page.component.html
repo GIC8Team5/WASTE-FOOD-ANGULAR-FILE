@@ -1,0 +1,84 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvkceI1-fFxgna9ePJK73hRvQlu_EV3ht7Rw&usqp=CAU"
+      alt="" width="30" height="24" class="d-inline-block align-text-top">
+    WFMS
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div [ngClass]="main?'displayBlock': 'displayNone'" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link" routerLinkActive="active">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="add" class="nav-link" routerLinkActive="active">Registration</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <div [ngClass]="donor?'displayBlock': 'displayNone'" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="donorHome" class="nav-link" routerLinkActive="active">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="addProduct" class="nav-link" routerLinkActive="active">Add Product</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="viewPost" class="nav-link" routerLinkActive="active">Post Details</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="logout" (click)="logoutDetails()"  class="nav-link" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div [ngClass]="charity?'displayBlock': 'displayNone'" class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="charityHome" class="nav-link" routerLinkActive="active">Home </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="charityProductDetails" class="nav-link" routerLinkActive="active">Product Details</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="logout" class="nav-link" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+<div class="home">
+<div class="container">
+  <br>
+  <i><h2 class="titl">{{title}}</h2></i>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+  
+</div>
+
+<!-- <footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved 2022 @ xxxxxxx xxxxxxx</span>
+  </div>
+</footer> -->

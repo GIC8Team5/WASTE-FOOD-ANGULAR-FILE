@@ -1,0 +1,16 @@
+table {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    table-layout: fixed;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+/* tr:nth-child(even) {
+    background-color: #00cf45;
+} */

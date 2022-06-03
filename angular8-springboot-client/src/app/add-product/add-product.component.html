@@ -1,0 +1,16 @@
+<div class="add">
+<div [hidden]="submitted" style="width: 700px;">
+  <form (ngSubmit)="addProductDetails()">
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Donate food! save lives</label>
+      <textarea class="form-control" name="productDetails" id="productDetails" [(ngModel)]="product.productDetails"
+        required placeholder="ADD FOOD" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+</div>
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

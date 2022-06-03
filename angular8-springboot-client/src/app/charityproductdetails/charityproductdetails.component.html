@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Post Details List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Product Details</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Email Id</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products | async">
+          <td>{{product.name}}</td>
+          <td>{{product.productDetails}}</td>
+          <td>{{product.phNumber}}</td>
+          <td>{{product.address}}</td>
+          <td>{{product.emailId}}</td>
+          <td><input type="text" class="form-control" id="status" required [(ngModel)]="product.status" name="emailId" value="{{product.status}}"></td>
+          <td>
+            <button (click)="updateDetails(product.id, product.status)" class="btn btn-info" style="margin-left: 10px">Update</button>
+        </td>
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

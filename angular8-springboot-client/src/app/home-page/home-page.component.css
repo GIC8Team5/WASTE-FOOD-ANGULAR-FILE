@@ -1,0 +1,21 @@
+.displayNone {
+    display: none !important;
+    
+}
+
+.displayBlock {
+    
+    display: block !important;
+    
+}
+
+.home{
+    
+    background-image:url(/assets/images/1.jpg)
+}
+.titl{
+    text-align: center;
+    color:brown;
+    background-color:antiquewhite;
+   
+}
