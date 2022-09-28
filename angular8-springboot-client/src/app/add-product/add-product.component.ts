@@ -26,10 +26,10 @@ export class AddProductComponent implements OnInit {
     this.productService.addProductDetails(this.product).subscribe(data => {
       alert("Product was added sucessfully");
       this.addSubmitted = true;
-      this. list();
+      this.list();
     }, error => {
       alert("OOPS! Product added was UnSucessfull");
-      this. list();
+      this.list();
     }
     )
   }
